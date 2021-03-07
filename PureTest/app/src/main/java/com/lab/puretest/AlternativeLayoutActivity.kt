@@ -1,0 +1,12 @@
+package com.lab.puretest
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+class AlternativeLayoutActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_alternative_layout)
+    }
+}

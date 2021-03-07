@@ -58,6 +58,10 @@ class ASRActivity : AppCompatActivity(), RecognitionListener, View.OnClickListen
 
     }
 
+    override fun onStart() {
+        super.onStart()
+    }
+
     private fun checkPermission() {
         ActivityCompat.requestPermissions(
             this,

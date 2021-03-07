@@ -18,6 +18,8 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
+import java.util.concurrent.ConcurrentSkipListMap
+import kotlin.collections.LinkedHashMap
 
 class MainActivity : AppCompatActivity(), View.OnClickListener, RecognitionListener {
 
@@ -25,6 +27,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RecognitionListe
     private val recordAudioRequestCode = 1
     private val speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this)
     private val speechRecognizerIntent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+
 
     init {
         speechRecognizerIntent.putExtra(
@@ -50,7 +53,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RecognitionListe
 
 
         listen.setOnClickListener(this)
-
     }
 
     private fun checkPermission() {
